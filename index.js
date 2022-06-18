@@ -2,7 +2,8 @@ const { writeFile, copyFile } = require('./utils/generate-site.js');
 const inquirer = require('inquirer');
 const generatePage = require('./src/page-template');
 
-// "data" is the team arrary
+// "data" is the team arrary (re: ryan)
+
 // const generateCards = (data) =>{
 //     data.forEach((employee)=>{
 //       let role = employee.getRole()
