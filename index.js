@@ -1,65 +1,172 @@
-// const { writeFile, copyFile } = require('./utils/generate-site.js');
-const inquirer = require('inquirer');
-// const generatePage = require('./src/page-template');
+const inquirer = require("inquirer");
+const fs = require('fs');
+const generateHTML = require('./utils/generate-site.js');
 
+const data = [];
 
-const questions = [{
-        type: "input",
-        name: "createTeam",
-        message: "Let's create your team! Enter employee info to create cards and render an HTML page. Press Enter to Begin."
+// Add manager
+const promptUser = [{
+        name: 'role',
+        type: 'confirm',
+        message: 'This application will generate an HTML page for your team. Are you ready to get started?',
     },
     {
-        type: "input",
-        name: "name",
-        message: "What is the employee's name?"
+        name: 'name',
+        type: 'input',
+        message: 'Enter manager name'
     },
     {
-        type: "input",
-        name: "id",
-        message: "What is their employee ID?"
+        name: 'id',
+        type: 'input',
+        message: 'Enter employee ID #'
     },
     {
-        type: "input",
-        name: "email",
-        message: "What is the employee's email address?"
+        name: 'email',
+        type: 'input',
+        message: 'Enter email address'
     },
     {
-        type: "list",
-        message: "Select team member's role by using the down arrow and pressing Enter",
-        name: "role",
-        choices: ["Manager", "Engineer", "Intern", "Employee"]
+        name: 'officeNumber',
+        type: 'input',
+        message: 'Enter office number'
     },
-
+    {
+        name: 'addEmployee',
+        type: 'list',
+        choices: ['Add engineer', 'Add intern', 'Add manager', 'DONE. Generate HTML'],
+        message: 'Add employee or choose DONE',
+    },
 ];
 
-// Function to initialize app
-function init() {
-    inquirer.prompt(questions)
+// Add new engineer
+const addEngineer = [{
+        name: 'name',
+        type: 'input',
+        message: "Enter engineer name"
+    },
+    {
+        name: 'id',
+        type: 'input',
+        message: "Enter engineer employee ID #"
+    },
+    {
+        name: 'email',
+        type: 'input',
+        message: "Enter engineer email"
+    },
+    {
+        name: 'github',
+        type: 'input',
+        message: "Enter engineer Github username"
+    },
+    {
+        name: 'addEmployee',
+        type: 'list',
+        choices: ['Add engineer', 'Add intern', 'Add manager', 'Done. Generate HTML'],
+        message: 'Add employee or choose DONE',
+    },
+];
+
+// Add intern
+const addIntern = [{
+        name: 'name',
+        type: 'input',
+        message: "Enter intern name"
+    },
+    {
+        name: 'id',
+        type: 'input',
+        message: "Enter intern employee ID #"
+    },
+    {
+        name: 'email',
+        type: 'input',
+        message: "Enter intern email"
+    },
+    {
+        name: 'school',
+        type: 'input',
+        message: "Enter intern school"
+    },
+    {
+        name: 'addEmployee',
+        type: 'list',
+        choices: ['Add engineer', 'Add intern', 'Add manager', 'Done. Generate HTML'],
+        message: 'Add employee or choose DONE',
+    },
+];
+
+// start app
+ask(promptUser);
+
+// Cycle through questions if member needs to be added
+function ask(questionArr) {
+    inquirer
+        .prompt(questionArr)
+        .then((member) => {
+            data.push(member);
+
+            if (member.addEmployee === 'Add engineer') {
+                ask(addEngineer);
+            } else if (member.addEmployee === 'Add intern') {
+                ask(addIntern);
+            } else {
+                generateCards(data);
+            }
+        })
+        .catch((err) => console.log(err));
 }
-// Function call to initialize app
-init();
+
+// function engineerHTML (data) {
+//     return `
+
+// //html for the actual card (3 different cards)
+
+// ${data.name}
+
+//     `
+// }
+
+//THE END (from TAs)
+
+const generateCards = (data) => {
+    // data.forEach((employee) => {
+    //     let role = employee.getRole()
+    //     if (role === "Manager") {
+    //         const managerCard = generateManager(employee);
+    //         cardArr.push(managerCard);
+    //     }
+    //     if (role === "Engineer") {
+    //         const engineerCard = generateEngineer(employee);
+    //         cardArr.push(engineerCard);
+    //     }
+    //     if (role === "Intern") {
+    //         const internCard = generateIntern(employee);
+    //         cardArr.push(internCard);
+    //     }
+    // })
+    // let cardStr = cardArr.join("");
+    const renderPage = renderHTML(cardStr);
+    return renderPage
+};
 
 
 
-// "data" is the team arrary (re: ryan)
-
-// const generateCards = (data) =>{
-//     data.forEach((employee)=>{
-//       let role = employee.getRole()
-//       if(role ==="Manager"){
-//           const managerCard = generateManager(employee);
-//           cardArr.push(managerCard);
-//       }
-//       if(role ==="Engineer"){
-//           const engineerCard = generateEngineer(employee);
-//           cardArr.push(engineerCard);
-//       }
-//       if(role === "Intern"){
-//           const internCard = generateIntern(employee);
-//           cardArr.push(internCard);
-//       }
+// promptUser()
+//     .then(promptProject)
+//     .then(portfolioData => {
+//         return generatePage(portfolioData);
 //     })
-//     let cardStr = cardArr.join("");
-//     const renderPage = renderHTML(cardStr);
-//     return renderPage
-// };
+//     .then(pageHTML => {
+//         return writeFile(pageHTML);
+//     })
+//     .then(writeFileResponse => {
+//         console.log(writeFileResponse);
+//         return copyFile();
+//     })
+//     .then(copyFileResponse => {
+//         console.log(copyFileResponse);
+//     })
+//     .catch(err => {
+//         console.log(err);
+//     });
