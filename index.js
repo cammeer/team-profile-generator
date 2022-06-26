@@ -1,64 +1,64 @@
 const inquirer = require('inquirer')
 const template = require('./src/page-template')
-const writeFile = require('./src/write-file')
+const writeFile = require('./utils/writeHTML')
 
 // employee questions
-const { Manager, managerQuestionsArr } = require('./lib/manager');
-const { Engineer, engineerQuestionsArr } = require('./lib/engineer');
-const { Intern, internQuestionsArr } = require('./lib/intern');
+const { manager, mquestions } = require('./lib/manager');
+const { engineer, equestions } = require('./lib/engineer');
+const { intern, iquestions } = require('./lib/intern');
 
 // array for all data objects
 const data = []
 
 const init = () => { managerQuestions() }
-    // prompts manager questions then creates object from user inputs based on Manager class 
+    // creates the manager
 const managerQuestions = () => {
-        inquirer.prompt(managerQuestionsArr)
+        inquirer.prompt(mquestions)
             .then((answers) => {
-                answers = new Manager(answers.name, answers.id, answers.email, answers.officeNumber)
+                answers = new manager(answers.name, answers.id, answers.email, answers.officeNumber)
                 data.push(answers);
                 return employeePrompt();
             })
     }
-    // prompts engineer questions then creates object from user inputs based on Engineer class 
+    // creates the engineer
 const engineerQuestions = () => {
-        inquirer.prompt(engineerQuestionsArr)
+        inquirer.prompt(equestions)
             .then((answers) => {
-                answers = new Engineer(answers.name, answers.id, answers.email, answers.github)
+                answers = new engineer(answers.name, answers.id, answers.email, answers.github)
                 data.push(answers);
                 return employeePrompt();
             })
     }
-    // prompts intern questions then creates object from user inputs based on Intern class 
+    // creates the intern
 const internQuestions = () => {
-        inquirer.prompt(internQuestionsArr)
+        inquirer.prompt(iquestions)
             .then((answers) => {
-                answers = new Intern(answers.name, answers.id, answers.email, answers.school)
+                answers = new intern(answers.name, answers.id, answers.email, answers.school)
                 data.push(answers);
                 return employeePrompt();
             })
     }
-    // handles prompts
+    // employee options
 const employeePrompt = () => {
     inquirer.prompt([{
             type: 'list',
             name: 'employeeType',
-            message: "What kind of team member would you like to add?",
+            message: "Use the arrow keys and press Enter to select an employee role to add to your site",
             choices: [
-                { name: 'Engineer', value: "addEngineer" },
-                { name: 'Intern', value: "addIntern" },
+                { name: 'engineer', value: "addEngineer" },
+                { name: 'intern', value: "addIntern" },
                 { name: 'DONE', value: "done" }
             ]
         }])
         .then(answer => {
-            // sends correct prompts based on the employee type
+            // returns specific employee questions
             if (answer.employeeType === 'addEngineer') { engineerQuestions(); };
             if (answer.employeeType === 'addIntern') { internQuestions(); };
             if (answer.employeeType === 'done') {
-                // converts users inputs into HTML
-                let html = template(employeesArr)
-                console.log('...');
-                // creates HTML file
+                //need var for data going into HTML template
+                let html = template(data)
+
+                //writes HTML file
                 writeFile(html);
             }
         })
