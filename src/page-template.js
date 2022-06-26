@@ -1,4 +1,4 @@
-const { employee } = require("../lib/employee")
+// const employee = require("../lib/employee")
 
 const mquestions = manager => {
     return `
@@ -18,45 +18,45 @@ const mquestions = manager => {
   `
 }
 
-const equestions = engineer => {
-        return `
-    <div id="${engineer.getRole()}-card" class="box card">
-      <div class="box name-role engineer-name">
-        <h2>${engineer.getName()}</h2>
-        <h3>Role: ${engineer.getRole()}</h3>
-      </div> 
-      <div class="box employee-info">
-        <ul class="list-group">
-          <li class="list-group-item">ID: ${engineer.getId()}</li>
-          <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-          
-          <li class="list-group-item">Github:
-          <a href="https://www.github.com/${engineer.getGithub()}" target="_blank">www.github.com/${engineer.getGithub()}</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  `
-    }
-    // Intern card template
-const iquestions = intern => {
-        return `
-    <div id="${intern.getRole()}-card" class="box card">
-      <div class="box name-role intern-name">
-        <h2>${intern.getName()}</h2>
-        <h3>Role: ${intern.getRole()}</h3>
-      </div> 
-      <div class="box employee-info">
-        <ul class="list-group">
-          <li class="list-group-item">ID: ${intern.getId()}</li>
-          <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
-          <li class="list-group-item">School: ${intern.getSchool()}</li>
-        </ul>
-      </div>
-    </div>
-  `
-    }
-    // create and combine cards
+// const equestions = engineer => {
+//         return `
+//     <div id="${engineer.getRole()}-card" class="box card">
+//       <div class="box name-role engineer-name">
+//         <h2>${engineer.getName()}</h2>
+//         <h3>Role: ${engineer.getRole()}</h3>
+//       </div> 
+//       <div class="box employee-info">
+//         <ul class="list-group">
+//           <li class="list-group-item">ID: ${engineer.getId()}</li>
+//           <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+
+//           <li class="list-group-item">Github:
+//           <a href="https://www.github.com/${engineer.getGithub()}" target="_blank">www.github.com/${engineer.getGithub()}</a>
+//           </li>
+//         </ul>
+//       </div>
+//     </div>
+//   `
+//     }
+// Intern card template
+// const iquestions = intern => {
+//         return `
+//     <div id="${intern.getRole()}-card" class="box card">
+//       <div class="box name-role intern-name">
+//         <h2>${intern.getName()}</h2>
+//         <h3>Role: ${intern.getRole()}</h3>
+//       </div> 
+//       <div class="box employee-info">
+//         <ul class="list-group">
+//           <li class="list-group-item">ID: ${intern.getId()}</li>
+//           <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
+//           <li class="list-group-item">School: ${intern.getSchool()}</li>
+//         </ul>
+//       </div>
+//     </div>
+//   `
+//     }
+// create and combine cards
 const employeesDiv = employee => {
     let employeeHtml = ''
 
@@ -81,7 +81,7 @@ const template = data => {
     <html>
       <head>
         <title>E Corp Team Site</title>
-        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <link href="bootstrap link goes here">
         <link rel="stylesheet" href="./style.css"><source src="../page-template.js" type="page-template">
       </head>
       <body>
