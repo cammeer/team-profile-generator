@@ -39,7 +39,7 @@ module.exports = templateData => {
 
         <div class="card-group">
             <div class="card">
-
+            <img class="card-img-top" src="https://assets-prd.ignimgs.com/2022/05/03/star-wars-the-black-series-darth-vader-premium-electronic-helmet-1-1651608395546.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title font-bold">Darth Vader</h5>
                     <p class="card-text font-italic">E Corp Manager</p>
