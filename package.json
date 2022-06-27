@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/cammeer/team-profile-generator/issues"
   },
-  "homepage": "https://github.com/cammeer/team-profile-generator#readme"
+  "homepage": "https://github.com/cammeer/team-profile-generator#readme",
+  "devDependencies": {
+    "jest": "^28.1.1"
+  }
 }

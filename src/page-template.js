@@ -8,7 +8,7 @@
 module.exports = templateData => {
     // destructure page data by section
     const { manager, engineer, intern, ...header } = templateData;
-
+    // need to fix data import in template literal
     return `
   <!DOCTYPE html>
   <html lang="en">
@@ -47,7 +47,9 @@ module.exports = templateData => {
                     <p>Office #: Death Star</p>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">Email Mr. Vader</small>
+                    <small class="text-muted">
+                    <a href = "mailto: vader@gmail.com">Email Mr. Vader</a>
+                    </small>
                 </div>
             </div>
             <div class="card">
@@ -56,10 +58,15 @@ module.exports = templateData => {
                     <h5 class="card-title font-bold">Agent Smith</h5>
                     <p class="card-text font-italic">E Corp Engineer</p>
                     <p>Employee ID#: 303</p>
-                    <p>GitHub: bluepill</p>
+                    <p>
+                    <p>GitHub:
+                    <a href = "https://github.com/cammeer?tab=projects&type=beta" target = "_blank">bluepill</a>
+                    </p>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">Email Mr. Anderson</small>
+                    <small class="text-muted">
+                    <a href = "mailto: matrix@gmail.com">Email Mr. Anderson</a>
+                    </small>
                 </div>
             </div>
             <div class="card">
@@ -71,7 +78,9 @@ module.exports = templateData => {
                     <p>School: Hill Valley</p>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">Email Mr. Tannen</small>
+                    <small class="text-muted">
+                    <a href = "mailto: thefuture@gmail.com">Email Mr. Biff</a>
+                    </small>
                 </div>
             </div>
         </div>

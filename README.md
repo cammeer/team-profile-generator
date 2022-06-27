@@ -4,6 +4,9 @@
   This application automatically generates a website for your project team or company.
 
 ![Team Profile Generator](./assets/images/teamprofile.png)
+
+[This link](https://cammeer.github.io/team-profile-generator/) will take you to my version of the deployed site if an index.html file is currently present.
+ 
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -16,7 +19,7 @@
   Installation instructions will be provided when this application has been updated.
   
   ## Usage
-  Usage instructions will be provided soon! Here's a link to a video showing basic operation: [Google Drive Link](https://drive.google.com/)
+  Usage instructions will be provided soon! Here's a link to a video showing basic operation: [Google Drive Link](https://drive.google.com/file/d/1JUgEetmfkSpzqg8rKBoa-uYVZssz9X3w/view)
  
   ## License
  Copyright © 2022 [Caren Merz](https://github.com/cammeer). <br />
