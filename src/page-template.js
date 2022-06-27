@@ -51,7 +51,7 @@ module.exports = templateData => {
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="https://cdna.artstation.com/p/assets/images/images/008/764/038/4k/kamil-trocinski-smith-01.jpg?1515154048" alt="Card image cap">
+                <img class="card-img-top" src="https://www.denofgeek.com/wp-content/uploads/2021/12/the-matrix-resurrections-agent-smith-hugo-weaving.jpg?fit=1600%2C1067" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title font-bold">Agent Smith</h5>
                     <p class="card-text font-italic">E Corp Engineer</p>
