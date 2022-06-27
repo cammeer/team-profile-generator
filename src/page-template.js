@@ -39,7 +39,7 @@ module.exports = templateData => {
 
         <div class="card-group">
             <div class="card">
-                <img class="card-img-top" src="./assets/images/vader.jpeg" alt="Card image cap">
+
                 <div class="card-body">
                     <h5 class="card-title font-bold">Darth Vader</h5>
                     <p class="card-text font-italic">E Corp Manager</p>
@@ -51,23 +51,27 @@ module.exports = templateData => {
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="..." alt="Card image cap">
+
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    <h5 class="card-title font-bold">Agent Smith</h5>
+                    <p class="card-text font-italic">E Corp Engineer</p>
+                    <p>Employee ID#: 303</p>
+                    <p>GitHub: bluepill</p>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">Email</small>
+                    <small class="text-muted">Email Mr. Anderson</small>
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="..." alt="Card image cap">
+
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <h5 class="card-title font-bold">Biff Tannen</h5>
+                    <p class="card-text font-italic">E Corp Intern</p>
+                    <p>Employee ID#: 1937</p>
+                    <p>School: Hill Valley</p>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">Email</small>
+                    <small class="text-muted">Email Mr. Tannen</small>
                 </div>
             </div>
         </div>
