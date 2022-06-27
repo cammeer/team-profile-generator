@@ -1,4 +1,5 @@
 const inquirer = require('inquirer')
+const fs = require("fs");
 const template = require('./src/page-template')
 const writeFile = require('./utils/writeHTML')
 

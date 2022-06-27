@@ -1,8 +1,8 @@
-const generateManager = mgrText => {
-    return `
-    <p>${mgrText}</p>
-    `;
-}
+// const generateManager = mgrText => {
+//     return `
+//     <p>${mgrText}</p>
+//     `;
+// }
 
 // export function to generate entire page
 module.exports = templateData => {
@@ -24,10 +24,47 @@ module.exports = templateData => {
   <body>
     <header>
       <div class="container flex-row justify-space-between align-center py-3">
-        <h1 class="page-title text-secondary bg-dark py-2 px-3">E Corp's Evil Employees</h1>
+        <h1 class="page-title text-light text-center bg-dark py-2 px-3">E Corp's Evil Employees</h1>
       </div>
     </header>
     <main class="">
+    
+    <div class="card-group">
+    <div class="card">
+      <img class="card-img-top" src="https://commons.wikimedia.org/wiki/File:Darth_Vader_-_2007_Disney_Weekends.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title font-bold">Darth Vader</h5>
+        <p class="card-text font-italic">E Corp Manager</p>
+        <p>Employee ID#: 2187</p>
+        <p>Office #: Death Star</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Email Mr. Vader</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Email</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Email</small>
+      </div>
+    </div>
+  </div>
+
+
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
