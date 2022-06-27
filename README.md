@@ -2,6 +2,8 @@
 # Team Profile Generator
   ## Description
   This application automatically generates a website for your project team or company.
+
+![Team Profile Generator](teamprofile.png)
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
