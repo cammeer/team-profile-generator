@@ -39,7 +39,7 @@ module.exports = templateData => {
 
         <div class="card-group">
             <div class="card">
-            <img class="card-img-top" src="https://assets-prd.ignimgs.com/2022/05/03/star-wars-the-black-series-darth-vader-premium-electronic-helmet-1-1651608395546.jpg" alt="Card image cap">
+                <img class="card-img-top" src="https://cdn.mos.cms.futurecdn.net/QcKp4ZFyd6p3ay5Yyqhr38.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title font-bold">Darth Vader</h5>
                     <p class="card-text font-italic">E Corp Manager</p>
@@ -51,7 +51,7 @@ module.exports = templateData => {
                 </div>
             </div>
             <div class="card">
-
+                <img class="card-img-top" src="https://cdna.artstation.com/p/assets/images/images/008/764/038/4k/kamil-trocinski-smith-01.jpg?1515154048" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title font-bold">Agent Smith</h5>
                     <p class="card-text font-italic">E Corp Engineer</p>
@@ -63,7 +63,7 @@ module.exports = templateData => {
                 </div>
             </div>
             <div class="card">
-
+                <img class="card-img-top" src="https://i.ytimg.com/vi/4rWZ_bYLs2U/maxresdefault.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title font-bold">Biff Tannen</h5>
                     <p class="card-text font-italic">E Corp Intern</p>
