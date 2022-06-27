@@ -23,11 +23,17 @@ module.exports = templateData => {
 
   <body>
     <header>
-      <div class="container flex-row justify-space-between align-center py-3">
-        <h1 class="page-title text-light text-center bg-dark py-2 px-3">E Corp's Evil Employees</h1>
-      </div>
+    <div class="jumbotron">
+    <h1 class="display-4">E Corp's Evil Employees</h1>
+    <p class="lead">View E Corp's employees, roles, and contact information below.</p>
+    <hr class="my-4">
+    <p>Click to learn about our open positions, if you dare.</p>
+    <p class="lead">
+      <a class="btn btn-dark btn-lg" href="#" role="button">Learn more</a>
+    </p>
+  </div>
     </header>
-    <main class="">
+    <main>
     
     <div class="card-group">
     <div class="card">
